@@ -7,9 +7,9 @@ from user_util import UserUtil
 def main():
     # Create a new user
     user_id = UserUtil.generate_user_id()
-    name = "John"
-    surname = "Doe"
-    birthday = datetime(1990, 1, 1)
+    name = "Adil"
+    surname = "Toktosunov"
+    birthday = datetime(2004, 6, 16)
 
     user = User(user_id, name, surname, birthday)
     user.email = UserUtil.generate_email(name, surname, "example.com")
@@ -31,8 +31,8 @@ def main():
     print("Total number of users:", UserService.get_number())
 
     # Update user
-    updated_user = User(1, "John", "Smith", datetime(1990, 1, 1))
-    updated_user.email = UserUtil.generate_email("John", "Smith", "example.com")
+    updated_user = User(1, "Adil", "T", datetime(2004, 6, 16))
+    updated_user.email = UserUtil.generate_email("Adil", "T", "example.com")
     UserService.update_user(user_id, updated_user)
 
     # Display updated user details

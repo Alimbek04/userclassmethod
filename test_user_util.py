@@ -13,14 +13,14 @@ class TestUserUtil(unittest.TestCase):
         self.assertTrue(UserUtil.is_strong_password(password))
 
     def test_validate_email(self):
-        valid_email = UserUtil.validate_email("john.doe@example.com")
-        invalid_email = UserUtil.validate_email("john.doe@.com")
+        valid_email = UserUtil.validate_email("adil.toktosunov@example.com")
+        invalid_email = UserUtil.validate_email("adil.t@.com")
         self.assertTrue(valid_email)
         self.assertFalse(invalid_email)
 
     def test_generate_email(self):
-        email = UserUtil.generate_email("John", "Doe", "example.com")
-        self.assertEqual(email, "john.doe@example.com")
+        email = UserUtil.generate_email("Adil", "Toktosunov", "example.com")
+        self.assertEqual(email, "adil.toktosunov@example.com")
 
 if __name__ == '__main__':
     unittest.main()

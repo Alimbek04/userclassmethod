@@ -12,7 +12,7 @@ class UserUtil:
     @staticmethod
     def generate_password():
         while True:
-            password = ''.join(random.choices('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()', k=12))
+            password = ''.join(random.choices('adilbeK1!@#$%^&*()', k=12))
             if UserUtil.is_strong_password(password):
                 return password
 
